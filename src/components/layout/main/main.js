@@ -5,19 +5,20 @@ import EmploymentInformation from "./employmentInformation";
 import MainInsite from "./mainInsite";
 import SlideImg from "./slideImg";
 import TypeButton from "./typeButton";
-import "./main.css";
+import RecommendButton from "./recommendButton";
 
-function Main () {
-    return (
-        <>
-        <Header />
-      <SlideImg/>
-      <MainInsite/>
+function Main() {
+  return (
+    <>
+      <Header />
+      <SlideImg />
+      <MainInsite />
       <TypeButton />
+      <RecommendButton />
       <Career />
       <EmploymentInformation />
       <Footer />
-        </>
-    )
+    </>
+  );
 }
 export default Main;
