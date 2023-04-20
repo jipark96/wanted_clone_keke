@@ -1,4 +1,9 @@
+import { useState } from "react";
+import { slideImgData } from "../../../data";
+
 function SlideImg() {
+  let [slideImg, setSlideImg] = useState(slideImgData);
+
     return (
       <div className="slideImg">
         <div className="slideImg_div1" onclick="">
@@ -12,17 +17,20 @@ function SlideImg() {
           </svg>
         </div>
         <div className="slideImg_container">
-          <div id="first_item" className="slideImg_wrap">
+          {
+            slideImg.map((data) => {
+              return (
+                <div className="slideImg_wrap">
             <img
               className="slideImg_img"
-              src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1993%2F16ebbe65.thumb_1006_280.jpg&w=1060&q=100"
+              src={data.img}
               alt=""
             ></img>
             <div className="slideImg_div3">
               <div className="slideImg_div4">
-                <div className="slideImg_p1">프리온보딩 프론트엔드 인턴십</div>
+                <div className="slideImg_p1">{data.title}</div>
                 <div className="slideImg_p2">
-                  기업이 진짜 원하는 프론트엔드 주니어
+                  {data.content}
                 </div>
               </div>
               <div className="slideImg_div5">
@@ -30,42 +38,9 @@ function SlideImg() {
               </div>
             </div>
           </div>
-          <div className="slideImg_wrap">
-            <img
-              className="slideImg_img"
-              src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F2011%2F982a3738.jpg&w=1060&q=100"
-              alt=""
-            ></img>
-            <div className="slideImg_div3">
-              <div className="slideImg_div4">
-                <div className="slideImg_p1">프리온보딩 프론트엔드 인턴십</div>
-                <div className="slideImg_p2">
-                  기업이 진짜 원하는 프론트엔드 주니어
-                </div>
-              </div>
-              <div className="slideImg_div5">
-                <div className="slideImg_p3">바로가기 </div>
-              </div>
-            </div>
-          </div>
-          <div className="slideImg_wrap">
-            <img
-              className="slideImg_img"
-              src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F2002%2F68e95300.jpg&w=1060&q=100"
-              alt=""
-            ></img>
-            <div className="slideImg_div3">
-              <div className="slideImg_div4">
-                <div className="slideImg_p1">프리온보딩 프론트엔드 인턴십</div>
-                <div className="slideImg_p2">
-                  기업이 진짜 원하는 프론트엔드 주니어
-                </div>
-              </div>
-              <div className="slideImg_div5">
-                <div className="slideImg_p3">바로가기 </div>
-              </div>
-            </div>
-          </div>
+              )
+            })
+          }
         </div>
       </div>
     );
