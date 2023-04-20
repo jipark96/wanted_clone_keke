@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { socialData } from "../../../data";
+import JoinModal from "./JoinModal";
 
 function LoginModal(props) {
+
     let [social, setSocial] = useState(socialData);
     let [email, setEmail] = useState("");
     let [isEmailValid, setIsEmailValid] = useState(false);
-  
+    let [country, setCountry] = useState(["한국","English","日本語"]);
+
+
     const validEmail = (email) => {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     };
@@ -53,9 +57,14 @@ function LoginModal(props) {
             type="button"
             className={`loginModal_button ${isEmailValid ? "active" : ""}`}
             disabled={!isEmailValid}
+            onClick={() => {
+                props.setJoinModal(!props.joinModal);
+                props.setLoginModal(false);
+            }}
           >
             <span className="loginModal_span2">이메일로 계속하기</span>
           </button>
+ 
   
           <div className="loginModal_div3">또는</div>
           <div className="loginModal_div4">
@@ -87,13 +96,16 @@ function LoginModal(props) {
                 alt=""
               />
               <div className="loginModal_div9">
-                <select className="loginModal_selct">
-                  <option value="Ko" selected>
-                    한국
-                  </option>
-                  <option value="En">English</option>
-                  <option value="Ja">日本語</option>
+                <select className="loginModal_select">
+                    {
+                        country.map((a,i) => {
+                            return (
+                                <option>{country[i]}</option>
+                            )
+                        })
+                    }
                 </select>
+                <div className="loginModal_div10">∨</div>
               </div>
             </div>
           </div>

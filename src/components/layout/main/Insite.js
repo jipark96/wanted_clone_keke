@@ -16,7 +16,7 @@ function Insite (props) {
                   className="mainInsite_li_div3"
                   alt=""
                 ></img>
-                <span className="mainInsite_li_span">{props.insite.className}</span>
+                <span className="mainInsite_li_span">{props.insite.name}</span>
               </div>
             </div>
           </li>
