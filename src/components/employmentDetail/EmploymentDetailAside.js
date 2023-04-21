@@ -4,7 +4,7 @@ function EmploymentDetailAside () {
   return (
     <div className="employmentDetailAside">
                     <div>
-                        <header className="employmentDetailAside_header">
+                        <div className="employmentDetailAside_header">
                             <div>
                                 <p className="employmentDetailAside_p1">채용보상금</p>
                                 <ul className="employmentDetailAside_ui">
@@ -44,7 +44,7 @@ function EmploymentDetailAside () {
                                     </ui>
                                 </button>
                             </div>
-                        </header>
+                        </div>
                     </div>
                 </div>
   )

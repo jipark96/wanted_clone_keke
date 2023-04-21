@@ -232,12 +232,12 @@ hr {
 }
 .slideImg {
   display: flex;
-  width: 1060px;
   height: 300px;
   position: relative;
   align-items: center;
   margin: 0 auto;
   padding-top: 80px;
+  overflow-x: hidden;
 }
 
 .slideImg_container {
@@ -247,34 +247,39 @@ hr {
   margin: 0 auto;
   position: relative;
 }
-
-.slideImg_div1 {
+.slideImg_btn1 {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
   width: 30px;
   height: 60px;
-  background-color: #fff;
-  align-items: center;
-  z-index: 2;
-  position: absolute;
-  justify-content: center;
-  border-radius: 30px;
   opacity: 0.5;
-  left: -75px;
+  border-radius: 15px;
+  background-color: #fff;
+  font-size: 16px;
+  z-index: 10;
+  left: 250px;
+  top: 200px;
+  border: 1px solid #fff;
   cursor: pointer;
 }
-.slideImg_div2 {
+.slideImg_btn2 {
   display: flex;
-  width: 30px;
-  height: 60px;
-  background-color: #fff;
-  align-items: center;
-  z-index: 2;
-  position: absolute;
-  justify-content: center;
-  border-radius: 30px;
-  opacity: 0.5;
-  right: -70px;
-  cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    opacity: 0.5;
+    border-radius: 15px;
+    background-color: #fff;
+    font-size: 16px;
+    z-index: 10;
+    right: 250px;
+    top: 200px;
+    border: 1px solid #fff;
+    cursor: pointer;
 }
 .slideImg_svg {
   width: 16px;
@@ -346,6 +351,7 @@ hr {
   scroll-margin-top: 48px;
   padding: 40px 0px;
   margin: 0 auto;
+
 }
 .mainInsite_title {
   height: 30px;
@@ -563,10 +569,10 @@ hr {
 }
 .mainInsite_div1 {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
   width: 1060px;
-  height: 50px;
   text-overflow: ellipsis;
   font-style: normal;
   font-weight: 600;
@@ -577,7 +583,7 @@ hr {
   border-color: #e1e2e4;
   color: #171717;
   width: 345px;
-  margin: 0 auto;
+  margin: 50px auto 0;
   height: 50px;
   font-size: 16px;
   background-color: #fff;
@@ -593,8 +599,8 @@ hr {
   display: inline-flex;
   font-weight: 700;
   cursor: pointer;
-  margin-top: 50px;
 }
+
 .type_button1 {
   width: 1060px;
   margin: 0 auto 60px;
