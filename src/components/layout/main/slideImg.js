@@ -3,19 +3,35 @@ import { slideImgData } from "../../../data";
 
 function SlideImg() {
   let [slideImg, setSlideImg] = useState(slideImgData);
+  let [index, setIndex] = useState(0)
+
+  const prevClick = () => {
+    if (index > 0) { // index가 0보다 크면 index 값을 1 감소
+      setIndex(index - 1)
+    } else { // 첫 번째 이미지에서 왼쪽 버튼 클릭 시, 마지막 이미지로 이동
+      setIndex(slideImg.length - 1);
+    }
+  }
   
+  const nextClick = () => {
+    if (index < slideImg.length-1) { // index가 button1 배열의 길이보다 작으면 index 값을 1 증가
+      setIndex(index + 1)
+    } else { // 마지막 이미지에서 오른쪽 버튼 클릭 시, 첫 번째 이미지로 이동
+      setIndex(0);
+    }
+  }
 
     return (
       <div className="slideImg">
-          <button type="button" className="slideImg_btn1">
+          <button type="button" className="slideImg_btn1" onClick={prevClick}>
           {'<'}
           </button>
-          <button type="button" className="slideImg_btn2">
+          <button type="button" className="slideImg_btn2" onClick={nextClick}>
           {'>'}
           </button>
         <div className="slideImg_container">
           {
-            slideImg.map((data,i) => {
+            slideImg.slice(index, index + slideImg.length).map((data,i) => {
               return (
                 <div className="slideImg_wrap">
             <img
