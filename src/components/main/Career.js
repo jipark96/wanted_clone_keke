@@ -43,16 +43,13 @@ function Career () {
                 careerImg.slice(index, index + careerImg.length).map((data, i) => {
                   return (
                     <div>
-                    <img src={data.img}
-                className="career_item" 
-                alt=""/>
-                <div className="career_a2">{data.title}</div>
-                <div className="career_h3">{data.content}</div>
-                </div>
+                      <img src={data.img} className="career_item" alt=""/>
+                      <div className="career_a2">{data.title}</div>
+                      <div className="career_h3">{data.content}</div>
+                    </div>
                   )
                 }) 
               }
-
             </div>
             </div>
         </div>

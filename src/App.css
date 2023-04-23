@@ -701,7 +701,7 @@ hr {
 }
 .career_wrap {
   width: 1060px;
-  height: 277px;
+  height: 350px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
