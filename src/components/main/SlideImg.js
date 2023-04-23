@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { slideImgData } from "../../../data";
+import { slideImgData } from "../../data";
 
 function SlideImg() {
   let [slideImg, setSlideImg] = useState(slideImgData);
-  let [index, setIndex] = useState(0)
+  let [index, setIndex] = useState(0);
+
 
   const prevClick = () => {
     if (index > 0) { // index가 0보다 크면 index 값을 1 감소

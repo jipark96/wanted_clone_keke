@@ -1,9 +1,9 @@
-import Footer from "../layout/footer/footer";
-import Header from "../layout/header/header";
-import TypeButton from "../layout/main/typeButton";
-import BookMark from "./bookMark";
-import CompanyCard from "./companyCard";
-import JobSelect from "./jobSelect";
+import Footer from "../layout/footer/Footer";
+import Header from "../layout/header/Header";
+import TypeButton from "../main/TypeButton";
+import BookMark from "./BookMark";
+import CompanyCard from "./CompanyCard";
+import JobSelect from "./JobSelect";
 
 function Employment2() {
   return (

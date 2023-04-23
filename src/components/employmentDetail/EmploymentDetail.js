@@ -1,5 +1,5 @@
-import Footer from "../layout/footer/footer";
-import Header from "../layout/header/header";
+import Footer from "../layout/footer/Footer";
+import Header from "../layout/header/Header";
 import EmploymentCompanyCard from "./EmploymentCompanyCard";
 import EmploymentContent from "./EmploymentContent";
 import EmploymentDetailAside from "./EmploymentDetailAside";

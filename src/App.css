@@ -246,9 +246,7 @@ hr {
   gap: 25px;
   margin: 0 auto;
   position: relative;
-  transform: transform 0.5s;
 }
-
 
 .slideImg_btn1 {
   display: flex;
@@ -288,6 +286,9 @@ hr {
 .slideImg_wrap {
   display: flex;
   z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .slideImg_img {
@@ -426,7 +427,7 @@ hr {
 .mainInsite_btn {
   padding: 7px 12px;
   font-size: 14px;
-  line-height: 142.9%;
+  line-height: 143%;
   height: 34px;
   display: flex;
   font-weight: 600;
@@ -643,7 +644,6 @@ hr {
   gap: 8px;
 }
 .career_btn1 {
-  cursor: not-allowed;
   opacity: 0.7;
   width: 36px;
   height: 36px;
@@ -657,6 +657,7 @@ hr {
   border: 1px solid #e1e2e4;
   border-radius: 50%;
   background-color: #fff;
+  cursor: pointer;
 }
 .career_title {
   margin: 0 auto;
@@ -703,10 +704,11 @@ hr {
   height: 277px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 10px;
+  overflow: hidden;
 }
 .career_item {
-  width: 522px;
+  width: 500px;
   height: 273px;
   cursor: pointer;
 }
@@ -960,6 +962,83 @@ hr {
   margin-top: 50px;
 }
 .jobSelect_div4 {
+  width: 1060px;
+  display: flex;
+  flex-direction:  row;
+  position: relative;
+  gap: 8px;
+}
+.jobSelect_div5 {
+  display: flex;
+  flex-direction: row;
+  width: 1060px;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+  overflow: hidden;
+  align-items: center;
+  
+}
+.jobSelect_button_start {
+  left: 0;
+  justify-content: flex-start;
+  background: linear-gradient(90deg, #fff 10%, hsla(0, 0%, 100%, 0));
+  display: flex;
+  position: absolute;
+  align-items: center;
+  height: 25px;
+  z-index: 1;
+  width: 50px;
+}
+.jobSelect_button1 {
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 30px;
+  min-height: 30px;
+  border: 1px solid #e1e2e4;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  color: #8a8a8a;
+  position: relative;
+  cursor: pointer;
+}
+.jobSelect_button_end {
+  align-items: center;
+  right: 0;
+  justify-content: flex-end;
+  background: linear-gradient(90deg, #fff 10%, hsla(0, 0, 0%, 100%));
+  display: flex;
+  position: absolute;
+  width: 80px;
+  height: 34px;
+  z-index: 1;
+
+}
+.jobSelect_btn2 {
+  background: rgb(242, 251, 245);
+  position: relative;
+  height: 32px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: flex;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #333;
+  border: 1px solid transparent;
+  cursor: pointer;
+  
+}
+/* .jobSelect_div4 {
   position: relative;
   overflow: hidden;
   display: block;
@@ -1028,7 +1107,8 @@ hr {
   height: 34px;
   z-index: 1;
   margin-right: 48px;
-}
+} */
+
 .bookMark {
   width: 87%;
   max-width: 1060px;

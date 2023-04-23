@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "./header.module.css";
+import "./Header.module.css";
 
 import { Link, Navigate, useNavigate } from "react-router-dom";
-import LoginModal from "./../../modal/LoginModal";
+import LoginModal from "../../modal/LoginModal";
 import JoinModal from "../../modal/JoinModal";
 
 function Header() {

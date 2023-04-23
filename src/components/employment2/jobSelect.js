@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function JobSelect() {
+  let [index, setIndex] = useState(0);
   let [benefit, setBenefit] = useState([
     "연봉이 최고의 복지",
     "재택근무",
@@ -12,6 +13,19 @@ function JobSelect() {
     "재택근무",
     "연봉이 최고의 복지",
   ]);
+
+  const prevClick = () => {
+      if (index > 0) { // index가 0보다 크면 index 값을 1 감소
+        setIndex(index - 1)
+      }
+    }
+    
+    const nextClick = () => {
+      if (index < benefit.length) { // index가 button1 배열의 길이보다 작으면 index 값을 1 증가
+        setIndex(index + 1)
+      }
+    }
+    
 
   return (
     <>
@@ -46,15 +60,15 @@ function JobSelect() {
           <div className="jobSelect_div4">
             <div className="jobSelect_div5">
               <div className="jobSelect_button_start">
-                <button className="jobSelect_button1">{"<"}</button>
+                <button className="jobSelect_button1" onClick={prevClick}>{"<"}</button>
               </div>
               <div className="jobSelect_button_end">
-                <button className="jobSelect_button1">{">"}</button>
+                <button className="jobSelect_button1" onClick={nextClick}>{">"}</button>
               </div>
-              {benefit.map((a, i) => {
+              {benefit.slice(index, index + benefit.length).map((a, i) => {
                 return (
                   <button type="button" className="jobSelect_btn2">
-                    {benefit[i]}
+                    {benefit[i + index]}
                     <img
                       src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F634f02e0-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
                       style={{ width: 16, height: 16 }}

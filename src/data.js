@@ -1,5 +1,6 @@
 export let companyData = [
   {
+    id: 0,
     img: process.env.PUBLIC_URL + "/company0.png",
     job: "웹디자이너",
     name: "무신사",
@@ -8,6 +9,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 1,
     img: process.env.PUBLIC_URL + "/company1.png",
     job: "채용 담당자",
     name: "우아한청년들",
@@ -16,6 +18,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 2,
     img: process.env.PUBLIC_URL + "/company2.png",
     job: "프론트엔드",
     name: "원티드",
@@ -24,6 +27,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 3,
     img: process.env.PUBLIC_URL + "/company3.png",
     job: "백엔드",
     name: "삼성",
@@ -32,6 +36,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 4,
     img: process.env.PUBLIC_URL + "/company1.png",
     job: "웹디자이너",
     name: "무신사",
@@ -40,6 +45,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 5,
     img: process.env.PUBLIC_URL + "/company0.png",
     job: "프론트엔드",
     name: "원티드",
@@ -48,6 +54,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 6,
     img: process.env.PUBLIC_URL + "/company1.png",
     job: "웹디자이너",
     name: "무신사",
@@ -56,6 +63,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 7,
     img: process.env.PUBLIC_URL + "/company3.png",
     job: "웹디자이너",
     name: "무신사",
@@ -64,6 +72,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 8,
     img: process.env.PUBLIC_URL + "/company3.png",
     job: "웹디자이너",
     name: "무신사",
@@ -72,6 +81,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 9,
     img: process.env.PUBLIC_URL + "/company0.png",
     job: "웹디자이너",
     name: "무신사",
@@ -80,6 +90,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 10,
     img: process.env.PUBLIC_URL + "/company2.png",
     job: "웹디자이너",
     name: "무신사",
@@ -88,6 +99,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 11,
     img: process.env.PUBLIC_URL + "/company1.png",
     job: "웹디자이너",
     name: "무신사",
@@ -96,6 +108,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 12,
     img: process.env.PUBLIC_URL + "/company2.png",
     job: "웹디자이너",
     name: "무신사",
@@ -104,6 +117,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 14,
     img: process.env.PUBLIC_URL + "/company3.png",
     job: "웹디자이너",
     name: "무신사",
@@ -112,6 +126,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 15,
     img: process.env.PUBLIC_URL + "/company0.png",
     job: "웹디자이너",
     name: "무신사",
@@ -120,6 +135,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 16,
     img: process.env.PUBLIC_URL + "/company1.png",
     job: "웹디자이너",
     name: "무신사",
@@ -128,6 +144,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 17,
     img: process.env.PUBLIC_URL + "/company0.png",
     job: "웹디자이너",
     name: "무신사",
@@ -136,6 +153,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 18,
     img: process.env.PUBLIC_URL + "/company3.png",
     job: "웹디자이너",
     name: "무신사",
@@ -144,6 +162,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 19,
     img: process.env.PUBLIC_URL + "/company2.png",
     job: "웹디자이너",
     name: "무신사",
@@ -152,6 +171,7 @@ export let companyData = [
     compensation: "채용보상금 1,000,000원",
   },
   {
+    id: 20,
     img: process.env.PUBLIC_URL + "/company1.png",
     job: "웹디자이너",
     name: "무신사",
@@ -205,6 +225,7 @@ export let slideImgData = [
 
 export let insiteData = [
   {
+    id: 0,
     img: process.env.PUBLIC_URL + "/insite0.png",
     title: "거기 숫자 뒤에 사람 있어요!",
     content:
@@ -213,6 +234,7 @@ export let insiteData = [
     name: "Aiden",
   },
   {
+    id: 1,
     img: process.env.PUBLIC_URL + "/insite1.png",
     title: "만국 직장인들의 공통점은?",
     content:
@@ -221,6 +243,7 @@ export let insiteData = [
     name: "Wanted",
   },
   {
+    id: 2,
     img: process.env.PUBLIC_URL + "/insite2.png",
     title: "내 인생은 내 인생대로!",
     content:
@@ -229,6 +252,7 @@ export let insiteData = [
     name: "KeKe",
   },
   {
+    id: 3,
     img: process.env.PUBLIC_URL + "/insite3.png",
     title: "어쩌다 보니 서른!",
     content:
@@ -237,6 +261,7 @@ export let insiteData = [
     name: "JiHyun",
   },
   {
+    id: 4,
     img: process.env.PUBLIC_URL + "/insite0.png",
     title: "거기 숫자 뒤에 사람 있어요!",
     content:
@@ -245,6 +270,7 @@ export let insiteData = [
     name: "Aiden",
   },
   {
+    id: 5,
     img: process.env.PUBLIC_URL + "/insite1.png",
     title: "만국 직장인들의 공통점은?",
     content:
@@ -253,6 +279,7 @@ export let insiteData = [
     name: "Wanted",
   },
   {
+    id: 6,
     img: process.env.PUBLIC_URL + "/insite2.png",
     title: "내 인생은 내 인생대로!",
     content:
@@ -261,6 +288,7 @@ export let insiteData = [
     name: "KeKe",
   },
   {
+    id: 7,
     img: process.env.PUBLIC_URL + "/insite3.png",
     title: "어쩌다 보니 서른!",
     content:
@@ -269,6 +297,7 @@ export let insiteData = [
     name: "JiHyun",
   },
   {
+    id: 8,
     img: process.env.PUBLIC_URL + "/insite0.png",
     title: "거기 숫자 뒤에 사람 있어요!",
     content:
@@ -277,6 +306,7 @@ export let insiteData = [
     name: "Aiden",
   },
   {
+    id: 9,
     img: process.env.PUBLIC_URL + "/insite1.png",
     title: "만국 직장인들의 공통점은?",
     content:
@@ -285,6 +315,7 @@ export let insiteData = [
     name: "Wanted",
   },
   {
+    id: 10,
     img: process.env.PUBLIC_URL + "/insite2.png",
     title: "내 인생은 내 인생대로!",
     content:
@@ -293,6 +324,7 @@ export let insiteData = [
     name: "KeKe",
   },
   {
+    id: 11,
     img: process.env.PUBLIC_URL + "/insite3.png",
     title: "어쩌다 보니 서른!",
     content:
@@ -301,6 +333,7 @@ export let insiteData = [
     name: "JiHyun",
   },
   {
+    id: 12,
     img: process.env.PUBLIC_URL + "/insite0.png",
     title: "거기 숫자 뒤에 사람 있어요!",
     content:
@@ -309,6 +342,7 @@ export let insiteData = [
     name: "Aiden",
   },
   {
+    id: 13,
     img: process.env.PUBLIC_URL + "/insite1.png",
     title: "만국 직장인들의 공통점은?",
     content:
@@ -317,6 +351,7 @@ export let insiteData = [
     name: "Wanted",
   },
   {
+    id: 14,
     img: process.env.PUBLIC_URL + "/insite2.png",
     title: "내 인생은 내 인생대로!",
     content:
@@ -325,6 +360,7 @@ export let insiteData = [
     name: "KeKe",
   },
   {
+    id: 15,
     img: process.env.PUBLIC_URL + "/insite3.png",
     title: "어쩌다 보니 서른!",
     content:
@@ -348,3 +384,30 @@ export let detailImg = [
     img: process.env.PUBLIC_URL + "/musinsa3.png",
   },
 ];
+
+export let careerData = [
+  {
+    id:0,
+    img: process.env.PUBLIC_URL + "career0.png",
+    title: "아티클",
+    content : "&Workers | 채용 브랜딩에 필요한 4가지 전략"
+  },
+  {
+    id:1,
+    img: process.env.PUBLIC_URL + "career1.png",
+    title: "아티클",
+    content : "채용 담당자를 사로잡는 경력직 이력서 쓰는 법"
+  },
+  {
+    id:2,
+    img: process.env.PUBLIC_URL + "career2.png",
+    title: "아티클",
+    content : "폴인ㅣ와디즈ㅣ아웃스탠딩ㅣ롱블랙ㅣ29CM"
+  },
+  {
+    id:3,
+    img: process.env.PUBLIC_URL + "career3.png",
+    title: "아티클",
+    content : "디자인 소스 제대로 사용하는 다섯 가지 팁"
+  },
+] 
