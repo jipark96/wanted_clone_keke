@@ -4,6 +4,7 @@ import CompanyInfo from "./CompanyInfo";
 
 function CompanyCard() {
   let [company, setCompany] = useState(companyData);
+
   return (
     <div className="companyCard">
       <ul className="companyCard_ul">

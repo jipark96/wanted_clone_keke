@@ -16,7 +16,7 @@ function Header() {
     "프리랜서",
     "AI 합격예측",
   ]);
-  let navigate = useNavigate();
+   const navigate = useNavigate();
   return (
     <div className="header">
       <div className="header_wrap">

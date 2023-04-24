@@ -42,9 +42,11 @@ function MainInsite() {
               </button>
             </div>
             { /* button1 배열의 일부를 잘라서 출력*/
-              button1.slice(index, index + button1.length).map((a,i) => {
+              button1
+              .slice(index, index + button1.length)
+              .map((a,i) => {
                 return (
-                  <button type="button" className="mainInsite_btn">{button1[i + index]}</button>
+                  <button type="button" className="mainInsite_btn">{a}</button>
                 )
               })
             }

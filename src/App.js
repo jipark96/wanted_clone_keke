@@ -1,9 +1,10 @@
-import { useState } from "react";
+
 import "./App.css";
-import Main from "./components/main/Main";
 import { Routes, Route, useNavigate, Outlet } from "react-router-dom";
-import EmploymentDetail from "./components/employmentDetail/EmploymentDetail";
-import Employment2 from "./components/employment2/Employment2";
+import EmploymentDetail from "./page/EmploymentDetail";
+import Employment2 from "./page/Employment2";
+import Main from "./page/Main";
+import { companyData } from "./data";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Route path = "/" element={<Main />} />
       <Route path = "/employment2" element = {<Employment2 />} />
       <Route path = "/employment/detail" element={<EmploymentDetail />} />
+      <Route path = "/employment/detail/:id" element={<EmploymentDetail  companyData={companyData}/>} />
       </Routes>
     </div>
   );
