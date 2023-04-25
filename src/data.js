@@ -1,3 +1,10 @@
+export const money = (number) => {
+  return number.toLocaleString();  //지역화된 형식에 맞추어 숫자를 문자열로 변환하므로, 천 단위마다 쉼표가 자동으로 추가
+}
+
+const compensation1 = 1000000;
+const compensation2 = money(compensation1);
+
 export let companyData = [
   {
     id: 0,
@@ -6,7 +13,7 @@ export let companyData = [
     name: "무신사",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 1,
@@ -15,7 +22,7 @@ export let companyData = [
     name: "우아한청년들",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 2,
@@ -24,7 +31,7 @@ export let companyData = [
     name: "원티드",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 3,
@@ -33,7 +40,7 @@ export let companyData = [
     name: "삼성",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 4,
@@ -42,7 +49,7 @@ export let companyData = [
     name: "무신사",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 5,
@@ -51,7 +58,7 @@ export let companyData = [
     name: "원티드",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 6,
@@ -60,7 +67,7 @@ export let companyData = [
     name: "무신사",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 7,
@@ -69,7 +76,7 @@ export let companyData = [
     name: "무신사",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 8,
@@ -78,7 +85,7 @@ export let companyData = [
     name: "무신사",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 9,
@@ -87,7 +94,7 @@ export let companyData = [
     name: "무신사",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 10,
@@ -96,7 +103,7 @@ export let companyData = [
     name: "무신사",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 11,
@@ -105,7 +112,7 @@ export let companyData = [
     name: "무신사",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 12,
@@ -114,7 +121,7 @@ export let companyData = [
     name: "무신사",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 14,
@@ -123,7 +130,7 @@ export let companyData = [
     name: "무신사",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 15,
@@ -132,7 +139,7 @@ export let companyData = [
     name: "무신사",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 16,
@@ -141,7 +148,7 @@ export let companyData = [
     name: "무신사",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 17,
@@ -150,7 +157,7 @@ export let companyData = [
     name: "무신사",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 18,
@@ -159,7 +166,7 @@ export let companyData = [
     name: "무신사",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 19,
@@ -168,7 +175,7 @@ export let companyData = [
     name: "무신사",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
   {
     id: 20,
@@ -177,7 +184,7 @@ export let companyData = [
     name: "무신사",
     speed: "응답률 매우 높음",
     region: "서울·한국",
-    compensation: "채용보상금 1,000,000원",
+    compensation: `채용보상금 ${compensation2}원`,
   },
 ];
 

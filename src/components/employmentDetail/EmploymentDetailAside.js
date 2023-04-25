@@ -1,6 +1,9 @@
 import React from 'react'
+import { money } from '../../data';
 
 function EmploymentDetailAside () {
+    const money1 = 500000;
+    const money2 = money(money1);
   return (
     <div className="employmentDetailAside">
                     <div>
@@ -10,11 +13,11 @@ function EmploymentDetailAside () {
                                 <ul className="employmentDetailAside_ui">
                                     <li className="employmentDetailAside_li">
                                         <p className="employmentDetailAside_p2">추천인</p>
-                                        <p className="employmentDetailAside_p3">500,000원</p>
+                                        <p className="employmentDetailAside_p3">{money2}원</p>
                                     </li>
                                     <li className="employmentDetailAside_li">
                                         <p className="employmentDetailAside_p2">지원자</p>
-                                        <p className="employmentDetailAside_p3">500,000원</p>
+                                        <p className="employmentDetailAside_p3">{money2}원</p>
                                     </li>
                                 </ul>
                                 <button className="employmentDetailAside_btn">
