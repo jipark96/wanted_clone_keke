@@ -7,24 +7,26 @@ import EmploymentDetailFollow from "../components/employmentDetail/EmploymentDet
 import EmploymentDetailImg from "../components/employmentDetail/EmploymentDetailImg";
 import EmploymentDetailInfo from "../components/employmentDetail/EmploymentDetailInfo";
 import Warning from "../components/employmentDetail/Warning";
+import { Outlet } from "react-router-dom";
 
 function EmploymentDetail() {
   return (
     <>
       <Layout>
-      <div className="employmentDetail">
-        <div className="employmentDetail_main">
-          <EmploymentDetailAside />
-          <EmploymentDetailImg />
-          <EmploymentDetailInfo />
-          <EmploymentContent />
-          <EmploymentDetailCompany />
-          <EmploymentDetailFollow />
-          <Warning />
+        <div className="employmentDetail">
+          <div className="employmentDetail_main">
+            <EmploymentDetailAside />
+            <EmploymentDetailImg />
+            <EmploymentDetailInfo />
+            <EmploymentContent />
+            <EmploymentDetailCompany />
+            <EmploymentDetailFollow />
+            <Warning />
+          </div>
+          <EmploymentCompanyCard />
         </div>
-        <EmploymentCompanyCard />
-      </div>
       </Layout>
+      <Outlet />
     </>
   );
 }

@@ -230,119 +230,11 @@ hr {
   cursor: pointer;
   margin-top: 12px;
 }
-.slideImg {
-  display: flex;
-  height: 300px;
-  position: relative;
-  align-items: center;
-  margin: 0 auto;
-  padding-top: 80px;
-  overflow-x: hidden;
-}
-
-.slideImg_container {
-  display: flex;
-  width: 1060px;
-  gap: 25px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.slideImg_btn1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 30px;
-  height: 60px;
-  opacity: 0.5;
-  border-radius: 15px;
-  background-color: #fff;
-  font-size: 16px;
-  z-index: 10;
-  left: 250px;
-  top: 200px;
-  border: 1px solid #fff;
-  cursor: pointer;
-}
-.slideImg_btn2 {
-  display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 30px;
-    height: 60px;
-    opacity: 0.5;
-    border-radius: 15px;
-    background-color: #fff;
-    font-size: 16px;
-    z-index: 10;
-    right: 250px;
-    top: 200px;
-    border: 1px solid #fff;
-    cursor: pointer;
-}
-
-.slideImg_wrap {
-  display: flex;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
 
 .slideImg_img {
   border-radius: 5px;
   width: 1060px;
   height: 300px;
-}
-
-.slideImg_div3 {
-  display: flex;
-  position: absolute;
-  background-color: white;
-  width: 330px;
-  height: 145px;
-  border-radius: 4px;
-  margin: 130px 40px 0px 23px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 20px;
-}
-
-.slideImg_div4 {
-  display: flex;
-  width: 290px;
-  gap: 10px;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 15px 20px 20px 20px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.slideImg_p1 {
-  font-size: 20px;
-  font-weight: 650;
-  text-align: start;
-  color: #333;
-}
-
-.slideImg_p2 {
-  font-size: 14px;
-  color: #333;
-}
-
-.slideImg_div5 {
-  display: flex;
-  margin-left: 20px;
-}
-.slideImg_p3 {
-  font-size: 14px;
-  font-weight: 700;
-  color: #36f;
-  cursor: pointer;
-  margin-bottom: 5px;
 }
 
 .mainInsite {
@@ -351,8 +243,8 @@ hr {
   scroll-margin-top: 48px;
   padding: 40px 0px;
   margin: 0 auto;
-
 }
+
 .mainInsite_title {
   height: 30px;
   text-align: center;
@@ -964,7 +856,7 @@ hr {
 .jobSelect_div4 {
   width: 1060px;
   display: flex;
-  flex-direction:  row;
+  flex-direction: row;
   position: relative;
   gap: 8px;
 }
@@ -976,7 +868,6 @@ hr {
   transform: translate3d(0px, 0px, 0px);
   overflow: hidden;
   align-items: center;
-  
 }
 .jobSelect_button_start {
   left: 0;
@@ -1016,7 +907,6 @@ hr {
   width: 80px;
   height: 34px;
   z-index: 1;
-
 }
 .jobSelect_btn2 {
   background: rgb(242, 251, 245);
@@ -1036,7 +926,6 @@ hr {
   color: #333;
   border: 1px solid transparent;
   cursor: pointer;
-  
 }
 /* .jobSelect_div4 {
   position: relative;
