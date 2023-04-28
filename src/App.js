@@ -11,11 +11,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/employment2" element={<Employment2 />} />
-        <Route path="/employment/detail" element={<EmploymentDetail />} />
-        <Route
-          path="/employment/detail/:id"
-          element={<EmploymentDetail companyData={companyData} />}
-        />
+        <Route path="/employment/detail" element={<EmploymentDetail />}>
+          <Route
+            path=":id"
+            element={<EmploymentDetail companyData={companyData} />}
+          />
+        </Route>
         <Route path="*" element={<div>없는 페이지</div>} />
       </Routes>
     </div>

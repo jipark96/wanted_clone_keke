@@ -26,7 +26,6 @@ function EmploymentDetail() {
           <EmploymentCompanyCard />
         </div>
       </Layout>
-      <Outlet />
     </>
   );
 }
