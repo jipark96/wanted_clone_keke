@@ -31,22 +31,77 @@ function SlideImg() {
       <S.SlideImgButton1 onClick={prevClick}>{"<"}</S.SlideImgButton1>
       <S.SlideImgButton2 onClick={nextClick}>{">"}</S.SlideImgButton2>
       <S.SlideImgContainer>
-        {slideImg.slice(index, index + slideImg.length).map((data, i) => {
-          return (
-            <S.SlideImgWrap>
-              <S.SlideImgImg src={data.img} alt="" />
-              <S.SlideImgDiv3>
-                <S.SlideImgDiv4>
-                  <S.SlideImgP1>{data.title}</S.SlideImgP1>
-                  <S.SlideImgP2>{data.content}</S.SlideImgP2>
-                </S.SlideImgDiv4>
-                <S.SlideImgDiv5>
-                  <S.SlideImgP3>바로가기 </S.SlideImgP3>
-                </S.SlideImgDiv5>
-              </S.SlideImgDiv3>
-            </S.SlideImgWrap>
-          );
-        })}
+        <div className="slideImgLeft">
+          <div></div>
+          {slideImg.map((data, idx) => {
+            if (
+              idx === index - 1 ||
+              (idx === slideImg.length - 1 && index === 0)
+            ) {
+              return (
+                <S.SlideImgWrap>
+                  <S.SlideImgImg src={data.img} alt="" key={idx} />
+                  <S.SlideImgDiv3>
+                    <S.SlideImgDiv4>
+                      <S.SlideImgP1>{data.title}</S.SlideImgP1>
+                      <S.SlideImgP2>{data.content}</S.SlideImgP2>
+                    </S.SlideImgDiv4>
+                    <S.SlideImgDiv5>
+                      <S.SlideImgP3>바로가기 </S.SlideImgP3>
+                    </S.SlideImgDiv5>
+                  </S.SlideImgDiv3>
+                </S.SlideImgWrap>
+              );
+            }
+          })}
+        </div>
+
+        <div className="slideImgCenter">
+          {slideImg.map((data, idx) => {
+            if (idx === index) {
+              return (
+                <S.SlideImgWrap>
+                  <S.SlideImgImg src={data.img} alt="" />
+                  <S.SlideImgDiv3>
+                    <S.SlideImgDiv4>
+                      <S.SlideImgP1>{data.title}</S.SlideImgP1>
+                      <S.SlideImgP2>{data.content}</S.SlideImgP2>
+                    </S.SlideImgDiv4>
+                    <S.SlideImgDiv5>
+                      <S.SlideImgP3>바로가기 </S.SlideImgP3>
+                    </S.SlideImgDiv5>
+                  </S.SlideImgDiv3>
+                </S.SlideImgWrap>
+              );
+            }
+            return null;
+          })}
+        </div>
+
+        <div className="slideImgRight">
+          {slideImg.map((data, idx) => {
+            if (
+              idx === index + 1 ||
+              (idx === 0 && index === slideImg.length - 1)
+            ) {
+              return (
+                <S.SlideImgWrap>
+                  <S.SlideImgImg src={data.img} alt="" />
+                  <S.SlideImgDiv3>
+                    <S.SlideImgDiv4>
+                      <S.SlideImgP1>{data.title}</S.SlideImgP1>
+                      <S.SlideImgP2>{data.content}</S.SlideImgP2>
+                    </S.SlideImgDiv4>
+                    <S.SlideImgDiv5>
+                      <S.SlideImgP3>바로가기 </S.SlideImgP3>
+                    </S.SlideImgDiv5>
+                  </S.SlideImgDiv3>
+                </S.SlideImgWrap>
+              );
+            }
+            return null;
+          })}
+        </div>
       </S.SlideImgContainer>
     </S.SlideImg>
   );

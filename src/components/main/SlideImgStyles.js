@@ -5,17 +5,20 @@ export const SlideImg = styled.div`
   height: 300px;
   position: relative;
   align-items: center;
+  justify-content: space-between;
   margin: 0 auto;
   padding-top: 80px;
   overflow-x: hidden;
+  width: 100%;
 `;
 
 export const SlideImgContainer = styled.div`
   display: flex;
-  width: 1060px;
   gap: 25px;
   margin: 0 auto;
   position: relative;
+  width: 1060px;
+  justify-content: space-between;
 `;
 
 export const SlideImgButton1 = styled.button`
@@ -67,6 +70,7 @@ export const SlideImgImg = styled.img`
     border-radius: 5px;
     width: 1060px;
     height: 300px;
+    object-fit: cover;
   }
 `;
 

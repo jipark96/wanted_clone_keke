@@ -1,6 +1,6 @@
 export const money = (number) => {
-  return number.toLocaleString();  //지역화된 형식에 맞추어 숫자를 문자열로 변환하므로, 천 단위마다 쉼표가 자동으로 추가
-}
+  return number.toLocaleString(); //지역화된 형식에 맞추어 숫자를 문자열로 변환하므로, 천 단위마다 쉼표가 자동으로 추가
+};
 
 const compensation1 = 1000000;
 const compensation2 = money(compensation1);
@@ -394,27 +394,27 @@ export let detailImg = [
 
 export let careerData = [
   {
-    id:0,
+    id: 0,
     img: process.env.PUBLIC_URL + "career0.png",
     title: "아티클",
-    content : "&Workers | 채용 브랜딩에 필요한 4가지 전략",
+    content: "&Workers | 채용 브랜딩에 필요한 4가지 전략",
   },
   {
-    id:1,
+    id: 1,
     img: process.env.PUBLIC_URL + "career1.png",
     title: "아티클",
-    content : "채용 담당자를 사로잡는 경력직 이력서 쓰는 법",
+    content: "채용 담당자를 사로잡는 경력직 이력서 쓰는 법",
   },
   {
-    id:2,
+    id: 2,
     img: process.env.PUBLIC_URL + "career2.png",
     title: "아티클",
-    content : "폴인ㅣ와디즈ㅣ아웃스탠딩ㅣ롱블랙ㅣ29CM",
+    content: "폴인ㅣ와디즈ㅣ아웃스탠딩ㅣ롱블랙ㅣ29CM",
   },
   {
-    id:3,
+    id: 3,
     img: process.env.PUBLIC_URL + "career3.png",
     title: "아티클",
-    content : "디자인 소스 제대로 사용하는 다섯 가지 팁",
+    content: "디자인 소스 제대로 사용하는 다섯 가지 팁",
   },
-] 
+];
