@@ -8,6 +8,7 @@ import JoinModal from "../../modal/JoinModal";
 function Header() {
   let [loginModal, setLoginModal] = useState(false);
   let [joinModal, setJoinModal] = useState(false);
+  let [email, setEmail] = useState("");
   let [headerLi, setHeaderLi] = useState([
     "채용",
     "이벤트",
@@ -16,7 +17,7 @@ function Header() {
     "프리랜서",
     "AI 합격예측",
   ]);
-   const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <div className="header">
       <div className="header_wrap">
@@ -24,14 +25,12 @@ function Header() {
           <img
             src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ficon-menu.png&w=17&q=75"
             className="header_img1"
-            alt=""
-          ></img>
+            alt=""></img>
           <div
             className="header_p1"
             onClick={() => {
               navigate("/");
-            }}
-          >
+            }}>
             wanted
           </div>
         </div>
@@ -52,8 +51,7 @@ function Header() {
             className="header_li3"
             onClick={() => {
               setLoginModal(!loginModal);
-            }}
-          >
+            }}>
             회원가입/로그인
           </div>
           {loginModal && (
@@ -62,10 +60,16 @@ function Header() {
               setLoginModal={setLoginModal}
               joinModal={joinModal}
               setJoinModal={setJoinModal}
+              setEmail={setEmail}
             />
           )}
           {joinModal && (
-            <JoinModal joinModal={joinModal} setJoinModal={setJoinModal} />
+            <JoinModal
+              joinModal={joinModal}
+              setJoinModal={setJoinModal}
+              email={email}
+              setEmail={setEmail}
+            />
           )}
 
           <div className="header_li4"></div>

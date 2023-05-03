@@ -4,12 +4,14 @@ import EmploymentDetail from "./page/EmploymentDetail";
 import Employment2 from "./page/Employment2";
 import Main from "./page/Main";
 import { companyData } from "./data";
+import Search from "./page/Search";
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/search" element={<Search />} />
         <Route path="/employment2" element={<Employment2 />} />
         <Route path="/employment/detail" element={<EmploymentDetail />}>
           <Route

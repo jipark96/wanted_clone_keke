@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import CompanyInfo from "../employment2/CompanyInfo";
-import { companyData } from "../../data";
+import companyData2 from "../db/companyData2.json";
 import EmploymentCompanyInfo from "./EmploymentCompanyInfo";
 
 const EmploymentCompanyCard = () => {
-  let [companyCard, setCompanyCard] = useState(companyData);
+  let [companyCard, setCompanyCard] = useState(companyData2);
   return (
     <div className="employmentCompanyCard">
       <p className="employmentCompanyCard_p">이 포지션을 찾고 계셨나요?</p>

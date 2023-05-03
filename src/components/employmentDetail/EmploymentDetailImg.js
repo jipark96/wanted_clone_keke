@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { detailImg } from "../../data";
+import companyDetailImg from "../db/companyDetailImg.json";
 
 const EmploymentDetailImg = () => {
-  let [companyImg, setCompanyImg] = useState(detailImg);
+  let [companyImg, setCompanyImg] = useState(companyDetailImg);
+
   return (
     <div className="employmentDetailImg">
       <div className="employmentDetailImg_div1">
@@ -16,6 +18,7 @@ const EmploymentDetailImg = () => {
                   src={data.img}
                   className="employmentDetailImg_img"
                   alt=""
+                  key={i}
                 />
               </div>
             );

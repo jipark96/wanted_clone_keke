@@ -3,7 +3,6 @@ import { socialData } from "../../data";
 
 function LoginModal(props) {
   let [social, setSocial] = useState(socialData);
-  let [email, setEmail] = useState("");
   let [isEmailValid, setIsEmailValid] = useState(false);
   let [country, setCountry] = useState(["한국", "English", "日本語"]);
 
@@ -18,8 +17,7 @@ function LoginModal(props) {
           className="loginModal_close"
           onClick={() => {
             props.setLoginModal(false);
-          }}
-        >
+          }}>
           &times;
         </span>
         <h1 className="loginModal_h1">wanted</h1>
@@ -40,14 +38,13 @@ function LoginModal(props) {
           className={`loginModal_input ${isEmailValid ? "" : "invalid"}`}
           placeholder="이메일을 입력해주세요."
           onChange={(e) => {
-            setEmail(e.target.value);
+            props.setEmail(e.target.value);
             setIsEmailValid(validEmail(e.target.value));
           }}
         />
         <p
           class="loginModal_email_error"
-          style={{ display: isEmailValid ? "none" : "block" }}
-        >
+          style={{ display: isEmailValid ? "none" : "block" }}>
           유효한 이메일 주소를 입력하세요.
         </p>
         <button
@@ -57,8 +54,7 @@ function LoginModal(props) {
           onClick={() => {
             props.setJoinModal(!props.joinModal);
             props.setLoginModal(false);
-          }}
-        >
+          }}>
           <span className="loginModal_span2">이메일로 계속하기</span>
         </button>
 
