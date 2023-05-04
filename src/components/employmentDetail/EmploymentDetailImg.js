@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { detailImg } from "../../data";
-import companyDetailImg from "../db/companyDetailImg.json";
+import companyDetailImg from "../../db/companyDetailImg.json";
 
 const EmploymentDetailImg = () => {
   let [companyImg, setCompanyImg] = useState(companyDetailImg);

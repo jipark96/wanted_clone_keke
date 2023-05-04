@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import companyData2 from "../db/companyData2.json";
+import companyData2 from "../../db/companyData2.json";
 import EmploymentCompanyInfo from "./EmploymentCompanyInfo";
 
 const EmploymentCompanyCard = () => {
