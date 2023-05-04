@@ -201,6 +201,17 @@ hr {
 .header_img2 {
   width: 53%;
 }
+.header_profile {
+  cursor: pointer;
+  margin-top: 13px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  position: relative;
+  background-size: cover;
+  background-image: url(https://static.wanted.co.kr/oneid-user/profile_default.png);
+}
 .header_li3 {
   margin-top: 18px;
   margin-left: 15px;
@@ -2199,4 +2210,67 @@ hr {
   height: 600px;
   overflow-y: auto;
   position: relative;
+}
+.passwordModalClose {
+  position: absolute;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+.passwordModalH1 {
+  text-align: center;
+  height: 25px;
+  color: #171717;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 auto;
+}
+.passwordModalDiv1 {
+  margin: 70px 0px 7px;
+}
+.passwordModalSpan1 {
+  text-align: left;
+  color: #888;
+  font-size: 15px;
+  font-weight: 600;
+}
+.passwordModalInput {
+  width: 93%;
+  height: 50px;
+  min-height: 50px;
+  padding: 0px 12px;
+  outline: none;
+  border: 1px solid #aaa;
+  color: #171717;
+  border-radius: 5px;
+  font-size: 16px;
+  font-size: 400;
+  margin-top: 10px;
+}
+.passwordModalButton {
+  border: none;
+  color: #aaa;
+  background-color: #e1e2e3;
+  margin-top: 30px;
+  width: 100%;
+  height: 50px;
+  min-height: 50px;
+  border-radius: 25px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.passwordModalSpan2 {
+  text-align: left;
+  color: #aaa;
+}
+.passwordModalDiv2 {
+  text-align: center;
+  margin-top: 30px;
+  color: #36f;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
 }

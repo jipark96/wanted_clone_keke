@@ -4,11 +4,14 @@ import "./Header.module.css";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import LoginModal from "../../modal/LoginModal";
 import JoinModal from "../../modal/JoinModal";
+import PasswordModal from "../../modal/PasswordModal";
 
 function Header() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // isLoggedIn 상태 관리
   let [loginModal, setLoginModal] = useState(false);
   let [joinModal, setJoinModal] = useState(false);
   let [email, setEmail] = useState("");
+  let [passwordModal, setPasswordModal] = useState(false);
   let [headerLi, setHeaderLi] = useState([
     "채용",
     "이벤트",
@@ -18,6 +21,11 @@ function Header() {
     "AI 합격예측",
   ]);
   const navigate = useNavigate();
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
+
   return (
     <div className="header">
       <div className="header_wrap">
@@ -45,15 +53,28 @@ function Header() {
               src={process.env.PUBLIC_URL + "/search.png"}
               className="header_img2"
               alt=""
+              onClick={() => {
+                navigate("/search");
+              }}
             />
           </div>
-          <div
-            className="header_li3"
-            onClick={() => {
-              setLoginModal(!loginModal);
-            }}>
-            회원가입/로그인
-          </div>
+          {isLoggedIn ? (
+            <>
+              <span className="header_profile"></span>
+              <div className="header_li3" onClick={handleLogout}>
+                로그아웃
+              </div>
+            </>
+          ) : (
+            <div
+              className="header_li3"
+              onClick={() => {
+                setLoginModal(!loginModal);
+              }}>
+              회원가입/로그인
+            </div>
+          )}
+
           {loginModal && (
             <LoginModal
               loginModal={loginModal}
@@ -61,6 +82,9 @@ function Header() {
               joinModal={joinModal}
               setJoinModal={setJoinModal}
               setEmail={setEmail}
+              email={email}
+              passwordModal={passwordModal}
+              setPasswordModal={setPasswordModal}
             />
           )}
           {joinModal && (
@@ -69,6 +93,16 @@ function Header() {
               setJoinModal={setJoinModal}
               email={email}
               setEmail={setEmail}
+            />
+          )}
+          {passwordModal && (
+            <PasswordModal
+              email={email}
+              setEmail={setEmail}
+              setLoginModal={setLoginModal}
+              passwordModal={passwordModal}
+              setPasswordModal={setPasswordModal}
+              setIsLoggedIn={setIsLoggedIn}
             />
           )}
 

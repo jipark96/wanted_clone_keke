@@ -10,6 +10,28 @@ function LoginModal(props) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
+  const checkEmailInLocalStorage = (email) => {
+    const storedUserString = localStorage.getItem("user");
+    if (storedUserString === null) {
+      return false;
+    }
+    const storedUser = JSON.parse(storedUserString);
+    return storedUser.email === email;
+  };
+
+  const handleContinue = () => {
+    if (isEmailValid) {
+      if (checkEmailInLocalStorage(props.email)) {
+        props.setPasswordModal(!props.passwordModal);
+        props.setLoginModal(false);
+        props.setJoinModal(false);
+      } else {
+        props.setJoinModal(!props.joinModal);
+        props.setLoginModal(false);
+      }
+    }
+  };
+
   return (
     <div className="loginModal">
       <div className="loginModal_content">
@@ -51,10 +73,7 @@ function LoginModal(props) {
           type="button"
           className={`loginModal_button ${isEmailValid ? "active" : ""}`}
           disabled={!isEmailValid}
-          onClick={() => {
-            props.setJoinModal(!props.joinModal);
-            props.setLoginModal(false);
-          }}>
+          onClick={handleContinue}>
           <span className="loginModal_span2">이메일로 계속하기</span>
         </button>
 
@@ -64,7 +83,7 @@ function LoginModal(props) {
             return (
               <button className="loginModal_button1">
                 <span>
-                  <img src={item.img} class="loginModal_img" alt="" />
+                  <img src={item.img} key={i} class="loginModal_img" alt="" />
                 </span>
                 <p className="loginModal_p1">{item.name}</p>
               </button>

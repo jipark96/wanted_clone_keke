@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import * as S from "../components/search/SearchStyles";
 import { searchRanking } from "../data";
+import { useNavigate } from "react-router-dom";
 const Search = () => {
+  const navigate = useNavigate();
   const [searchRank, setSearchRank] = useState(searchRanking);
   const [searchBenefit, setSearchBenefit] = useState([
     "#연봉상위2~5%",
@@ -13,7 +15,12 @@ const Search = () => {
   return (
     <>
       <S.SearchWrap>
-        <S.SearchClose>&times;</S.SearchClose>
+        <S.SearchClose
+          onClick={() => {
+            navigate("/");
+          }}>
+          &times;
+        </S.SearchClose>
         <S.SearchInputDiv>
           <S.SearchInput type="search" placeholder="검색어를 입력해 주세요." />
         </S.SearchInputDiv>

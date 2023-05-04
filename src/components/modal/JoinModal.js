@@ -1,7 +1,7 @@
 import { useState } from "react";
 import JoinModalCheckBox from "./JoinModalCheckBox";
 
-function JoinModal(props, email) {
+function JoinModal(props) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
@@ -9,9 +9,9 @@ function JoinModal(props, email) {
   const handleJoin = () => {
     const user = {
       email: props.email,
-      name,
-      phone,
-      password,
+      name: name,
+      phone: phone,
+      password: password,
     };
     // 로컬 스토리지에 회원 정보 저장
     localStorage.setItem("user", JSON.stringify(user));
@@ -54,6 +54,8 @@ function JoinModal(props, email) {
           type="text"
           className="joinModal_input2"
           placeholder="이름을 입력해 주세요"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
         <div className="joinModal_div1">
           <span className="joinModal_span">휴대폰 번호</span>
@@ -71,6 +73,8 @@ function JoinModal(props, email) {
               type="text"
               className="joinModal_input3"
               placeholder="(예시)01012345678"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
             />
             <button className="joinModal_button1">
               <span className="joinModal_span2">인증번호 받기</span>
@@ -91,11 +95,15 @@ function JoinModal(props, email) {
           type="password"
           className="joinModal_input2"
           placeholder="비밀번호를 입력해주세요."
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
         <input
           type="password"
           className="joinModal_input2"
           placeholder="비밀번호를 다시 한번 입력해주세요."
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
         <div style={{ marginTop: 5 }}>
           <p className="joinModal_p">
