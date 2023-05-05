@@ -5,13 +5,33 @@ import Employment2 from "./page/Employment2";
 import Main from "./page/Main";
 import { companyData } from "./data";
 import Search from "./page/Search";
+import SearchResult from "./page/SearchResult";
+import { useState } from "react";
 
 function App() {
+  let [searchResults, setSearchResults] = useState([]);
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/search" element={<Search />} />
+        <Route
+          path="/search"
+          element={
+            <Search
+              searchResults={searchResults}
+              setSearchResults={setSearchResults}
+            />
+          }
+        />
+        <Route
+          path="/search/:searchKeyword"
+          element={
+            <SearchResult
+              searchResults={searchResults}
+              setSearchResults={setSearchResults}
+            />
+          }
+        />
         <Route path="/employment2" element={<Employment2 />} />
         <Route path="/employment/detail" element={<EmploymentDetail />}>
           <Route

@@ -15,17 +15,18 @@ function JobSelect() {
   ]);
 
   const prevClick = () => {
-      if (index > 0) { // index가 0보다 크면 index 값을 1 감소
-        setIndex(index - 1)
-      }
+    if (index > 0) {
+      // index가 0보다 크면 index 값을 1 감소
+      setIndex(index - 1);
     }
-    
-    const nextClick = () => {
-      if (index < benefit.length) { // index가 button1 배열의 길이보다 작으면 index 값을 1 증가
-        setIndex(index + 1)
-      }
+  };
+
+  const nextClick = () => {
+    if (index < benefit.length) {
+      // index가 button1 배열의 길이보다 작으면 index 값을 1 증가
+      setIndex(index + 1);
     }
-    
+  };
 
   return (
     <>
@@ -60,10 +61,14 @@ function JobSelect() {
           <div className="jobSelect_div4">
             <div className="jobSelect_div5">
               <div className="jobSelect_button_start">
-                <button className="jobSelect_button1" onClick={prevClick}>{"<"}</button>
+                <button className="jobSelect_button1" onClick={prevClick}>
+                  {"<"}
+                </button>
               </div>
               <div className="jobSelect_button_end">
-                <button className="jobSelect_button1" onClick={nextClick}>{">"}</button>
+                <button className="jobSelect_button1" onClick={nextClick}>
+                  {">"}
+                </button>
               </div>
               {benefit.slice(index, index + benefit.length).map((a, i) => {
                 return (
@@ -81,7 +86,7 @@ function JobSelect() {
           </div>
         </div>
       </div>
-      <hr style={{ marginTop: 40 }} />
+      <hr style={{ marginTop: 40, width: 1060 }} />
     </>
   );
 }

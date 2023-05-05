@@ -2274,3 +2274,18 @@ hr {
   font-weight: 600;
   cursor: pointer;
 }
+.searchResult_div1 {
+  width: 100%;
+  margin-top: 100px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.searchResult_h2 {
+  left: 50%;
+  top: 50%;
+  max-width: 90%;
+  font-size: 48px;
+  color: #333;
+  text-align: center;
+  margin: 0 auto;
+}
