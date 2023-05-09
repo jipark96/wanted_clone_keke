@@ -1,8 +1,19 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setLoginModal, setPasswordModal } from "../../store";
 
 const PasswordModal = (props) => {
   const [password, setPassword] = useState("");
+  const loginModal = useSelector((state) => state.loginModal);
+  const dispatch = useDispatch();
 
+  const handleLoginModal = () => {
+    dispatch(setLoginModal());
+  };
+  const passwordModal = useSelector((state) => state.passwordModal);
+  const handlePasswordModal = () => {
+    dispatch(setPasswordModal());
+  };
   const handleLogin = () => {
     const storedUserString = localStorage.getItem("user");
     const storedUser = JSON.parse(storedUserString);
@@ -11,7 +22,8 @@ const PasswordModal = (props) => {
       return false;
     }
     alert("로그인이 되었습니다.");
-    props.setPasswordModal(false);
+    handlePasswordModal(false);
+    handleLoginModal(false);
     props.setIsLoggedIn(true);
   };
 
@@ -21,8 +33,8 @@ const PasswordModal = (props) => {
         <span
           className="passwordModalClose"
           onClick={() => {
-            props.setLoginModal(true);
-            props.setPasswordModal(false);
+            handleLoginModal();
+            handlePasswordModal(false);
           }}>
           {"<"}
         </span>

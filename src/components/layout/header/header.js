@@ -1,17 +1,18 @@
 import { useState } from "react";
 import "./Header.module.css";
-
+import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import LoginModal from "../../modal/LoginModal";
 import JoinModal from "../../modal/JoinModal";
 import PasswordModal from "../../modal/PasswordModal";
+import { setJoinModal, setLoginModal, setPasswordModal } from "../../../store";
 
 function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // isLoggedIn 상태 관리
-  let [loginModal, setLoginModal] = useState(false);
-  let [joinModal, setJoinModal] = useState(false);
+  // let [loginModal, setLoginModal] = useState(false);
+  // let [joinModal, setJoinModal] = useState(false);
   let [email, setEmail] = useState("");
-  let [passwordModal, setPasswordModal] = useState(false);
+  // let [passwordModal, setPasswordModal] = useState(false);
   let [headerLi, setHeaderLi] = useState([
     "채용",
     "이벤트",
@@ -20,6 +21,23 @@ function Header() {
     "프리랜서",
     "AI 합격예측",
   ]);
+
+  const loginModal = useSelector((state) => state.loginModal);
+  const joinModal = useSelector((state) => state.joinModal);
+
+  const dispatch = useDispatch();
+
+  const handleLoginModal = () => {
+    dispatch(setLoginModal());
+  };
+  const handleJoinModal = () => {
+    dispatch(setJoinModal());
+  };
+
+  const passwordModal = useSelector((state) => state.passwordModal);
+  const handlePasswordModal = () => {
+    dispatch(setPasswordModal());
+  };
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -66,42 +84,18 @@ function Header() {
               </div>
             </>
           ) : (
-            <div
-              className="header_li3"
-              onClick={() => {
-                setLoginModal(!loginModal);
-              }}>
+            <div className="header_li3" onClick={handleLoginModal}>
               회원가입/로그인
             </div>
           )}
 
-          {loginModal && (
-            <LoginModal
-              loginModal={loginModal}
-              setLoginModal={setLoginModal}
-              joinModal={joinModal}
-              setJoinModal={setJoinModal}
-              setEmail={setEmail}
-              email={email}
-              passwordModal={passwordModal}
-              setPasswordModal={setPasswordModal}
-            />
-          )}
-          {joinModal && (
-            <JoinModal
-              joinModal={joinModal}
-              setJoinModal={setJoinModal}
-              email={email}
-              setEmail={setEmail}
-            />
-          )}
+          {loginModal && <LoginModal setEmail={setEmail} email={email} />}
+
+          {joinModal && <JoinModal email={email} setEmail={setEmail} />}
           {passwordModal && (
             <PasswordModal
               email={email}
               setEmail={setEmail}
-              setLoginModal={setLoginModal}
-              passwordModal={passwordModal}
-              setPasswordModal={setPasswordModal}
               setIsLoggedIn={setIsLoggedIn}
             />
           )}

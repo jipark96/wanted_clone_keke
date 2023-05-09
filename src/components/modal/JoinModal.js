@@ -1,10 +1,22 @@
 import { useState } from "react";
 import JoinModalCheckBox from "./JoinModalCheckBox";
+import { useDispatch, useSelector } from "react-redux";
+import { setJoinModal, setLoginModal } from "../../store";
 
 function JoinModal(props) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const joinModal = useSelector((state) => state.joinModal);
+  const handleJoinModal = () => {
+    dispatch(setJoinModal());
+  };
+  const loginModal = useSelector((state) => state.loginModal);
+
+  const handleLoginModal = () => {
+    dispatch(setLoginModal());
+  };
 
   const handleJoin = () => {
     const user = {
@@ -16,6 +28,8 @@ function JoinModal(props) {
     // 로컬 스토리지에 회원 정보 저장
     localStorage.setItem("user", JSON.stringify(user));
     alert("회원가입이 완료되었습니다.");
+    handleJoinModal(false);
+    handleLoginModal(false);
   };
 
   let [country, setCountry] = useState([
@@ -30,11 +44,7 @@ function JoinModal(props) {
   return (
     <div className="joinModal">
       <div className="joinModal_content">
-        <span
-          className="joinModal_close"
-          onClick={() => {
-            props.setJoinModal(false);
-          }}>
+        <span className="joinModal_close" onClick={handleJoinModal}>
           &times;
         </span>
         <h1 className="joinModal_h1">회원가입</h1>

@@ -1,11 +1,28 @@
 import { useState } from "react";
 import { socialData } from "../../data";
+import { useDispatch, useSelector } from "react-redux";
+import { setJoinModal, setLoginModal, setPasswordModal } from "../../store";
 
 function LoginModal(props) {
   let [social, setSocial] = useState(socialData);
   let [isEmailValid, setIsEmailValid] = useState(false);
   let [country, setCountry] = useState(["한국", "English", "日本語"]);
 
+  const loginModal = useSelector((state) => state.loginModal);
+  const dispatch = useDispatch();
+
+  const handleLoginModal = () => {
+    dispatch(setLoginModal());
+  };
+
+  const joinModal = useSelector((state) => state.joinModal);
+  const handleJoinModal = () => {
+    dispatch(setJoinModal());
+  };
+  const passwordModal = useSelector((state) => state.passwordModal);
+  const handlePasswordModal = () => {
+    dispatch(setPasswordModal());
+  };
   const validEmail = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
@@ -22,12 +39,12 @@ function LoginModal(props) {
   const handleContinue = () => {
     if (isEmailValid) {
       if (checkEmailInLocalStorage(props.email)) {
-        props.setPasswordModal(!props.passwordModal);
-        props.setLoginModal(false);
-        props.setJoinModal(false);
+        handlePasswordModal();
+        setLoginModal(false);
+        setJoinModal(false);
       } else {
-        props.setJoinModal(!props.joinModal);
-        props.setLoginModal(false);
+        handleJoinModal();
+        setLoginModal(false);
       }
     }
   };
@@ -35,11 +52,7 @@ function LoginModal(props) {
   return (
     <div className="loginModal">
       <div className="loginModal_content">
-        <span
-          className="loginModal_close"
-          onClick={() => {
-            props.setLoginModal(false);
-          }}>
+        <span className="loginModal_close" onClick={handleLoginModal}>
           &times;
         </span>
         <h1 className="loginModal_h1">wanted</h1>
