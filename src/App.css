@@ -1069,6 +1069,7 @@ hr {
   border-radius: 4px;
 }
 .companyCard_div2 {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   margin-top: 15px;
@@ -2288,4 +2289,9 @@ hr {
   color: #333;
   text-align: center;
   margin: 0 auto;
+}
+.bookmark_h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #171717;
 }
