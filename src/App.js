@@ -8,6 +8,7 @@ import Search from "./page/Search";
 import SearchResult from "./page/SearchResult";
 import { useState } from "react";
 import Bookmark from "./page/Bookmark";
+import Event from "./page/Event";
 
 function App() {
   let [searchResults, setSearchResults] = useState([]);
@@ -41,6 +42,7 @@ function App() {
           />
         </Route>
         <Route path="/bookmark" element={<Bookmark />} />
+        <Route path="/event" element={<Event />} />
         <Route path="*" element={<div>없는 페이지</div>} />
       </Routes>
     </div>

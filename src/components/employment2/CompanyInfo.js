@@ -13,16 +13,13 @@ function CompanyInfo(props) {
   return (
     <>
       <li className="companyCard_li">
-        <img
-          src={props.company.img}
-          className="companyCard_img"
-          alt=""
-          onClick={handleBookmarkToggle}
-        />
+        <img src={props.company.img} className="companyCard_img" alt="" />
         <div className="companyCard_div2">
           <div className="companyCard_h2">
             {props.company.job}
-            <span>{props.isBookmarked ? "⛊" : "⛉"}</span>
+            <span onClick={handleBookmarkToggle}>
+              {props.isBookmarked ? "⛊" : "⛉"}
+            </span>
           </div>
           <div className="companyCard_p1">{props.company.name}</div>
           <div className="companyCard_p4">{props.company.speed}</div>

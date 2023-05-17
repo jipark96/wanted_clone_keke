@@ -7,8 +7,7 @@ export const SlideImg = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding-top: 80px;
-  overflow-x: hidden;
+  padding-top: 150px;
   width: 100%;
 `;
 
@@ -18,7 +17,10 @@ export const SlideImgContainer = styled.div`
   margin: 0 auto;
   position: relative;
   width: 1060px;
+  height: 300px;
   justify-content: space-between;
+  overflow: hidden;
+  overflow-y: hidden;
 `;
 
 export const SlideImgButton1 = styled.button`
