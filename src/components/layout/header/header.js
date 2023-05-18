@@ -6,37 +6,25 @@ import LoginModal from "../../modal/LoginModal";
 import JoinModal from "../../modal/JoinModal";
 import PasswordModal from "../../modal/PasswordModal";
 import { setJoinModal, setLoginModal, setPasswordModal } from "../../../store";
-
 function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // isLoggedIn 상태 관리
-  // let [loginModal, setLoginModal] = useState(false);
-  // let [joinModal, setJoinModal] = useState(false);
   let [email, setEmail] = useState("");
-  // let [passwordModal, setPasswordModal] = useState(false);
-  let [headerLi, setHeaderLi] = useState([
-    "채용",
-    "이벤트",
-    "직군별 연봉",
-    "이력서",
-    "프리랜서",
-    "AI 합격예측",
-  ]);
 
   const loginModal = useSelector((state) => state.loginModal);
   const joinModal = useSelector((state) => state.joinModal);
 
   const dispatch = useDispatch();
 
-  const handleLoginModal = () => {
-    dispatch(setLoginModal());
+  const handleLoginModal = (state) => {
+    dispatch(setLoginModal(state));
   };
-  const handleJoinModal = () => {
-    dispatch(setJoinModal());
+  const handleJoinModal = (state) => {
+    dispatch(setJoinModal(state));
   };
 
   const passwordModal = useSelector((state) => state.passwordModal);
-  const handlePasswordModal = () => {
-    dispatch(setPasswordModal());
+  const handlePasswordModal = (state) => {
+    dispatch(setPasswordModal(state));
   };
   const navigate = useNavigate();
 
@@ -61,9 +49,26 @@ function Header() {
           </div>
         </div>
         <span className="header_ul">
-          {headerLi.map((a, i) => {
-            return <div className="header_li">{headerLi[i]}</div>;
-          })}
+          <div
+            className="header_li"
+            onClick={() => {
+              navigate("/employment2");
+            }}>
+            채용
+          </div>
+          <div className="header_li">커리어</div>
+          <div
+            className="header_li"
+            onClick={() => {
+              navigate("/event");
+            }}>
+            이벤트
+          </div>
+
+          <div className="header_li">이력서</div>
+          <div className="header_li">커뮤니티</div>
+          <div className="header_li">프리랜서</div>
+          <div className="header_li">AI 합격예측</div>
         </span>
         <span className="header_span">
           <div className="header_li2">

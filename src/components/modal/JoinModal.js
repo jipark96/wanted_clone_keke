@@ -2,20 +2,23 @@ import { useState } from "react";
 import JoinModalCheckBox from "./JoinModalCheckBox";
 import { useDispatch, useSelector } from "react-redux";
 import { setJoinModal, setLoginModal } from "../../store";
+import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
 
 function JoinModal(props) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
-  const dispatch = useDispatch();
-  const joinModal = useSelector((state) => state.joinModal);
-  const handleJoinModal = () => {
-    dispatch(setJoinModal());
-  };
-  const loginModal = useSelector((state) => state.loginModal);
+  const [showAlert, setShowAlert] = useState(false);
 
-  const handleLoginModal = () => {
-    dispatch(setLoginModal());
+  const dispatch = useDispatch();
+
+  const handleJoinModal = (state) => {
+    dispatch(setJoinModal(state));
+  };
+
+  const handleLoginModal = (state) => {
+    dispatch(setLoginModal(state));
   };
 
   const handleJoin = () => {
@@ -27,7 +30,7 @@ function JoinModal(props) {
     };
     // 로컬 스토리지에 회원 정보 저장
     localStorage.setItem("user", JSON.stringify(user));
-    alert("회원가입이 완료되었습니다.");
+    setShowAlert(true);
     handleJoinModal(false);
     handleLoginModal(false);
   };
@@ -43,6 +46,18 @@ function JoinModal(props) {
 
   return (
     <div className="joinModal">
+      {showAlert && (
+        <Alert showAlert={showAlert} variant="success">
+          <Alert.Heading>회원가입 완료되었습니다.</Alert.Heading>
+          <div className="d-flex justify-content-center">
+            <Button
+              onClick={() => setShowAlert(false)}
+              variant="outline-success">
+              Close me
+            </Button>
+          </div>
+        </Alert>
+      )}
       <div className="joinModal_content">
         <span className="joinModal_close" onClick={handleJoinModal}>
           &times;
