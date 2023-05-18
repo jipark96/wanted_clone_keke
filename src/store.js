@@ -4,9 +4,7 @@ const loginModal = createSlice({
   name: "loginModal",
   initialState: false,
   reducers: {
-    setLoginModal: (state) => {
-      return !state;
-    },
+    setLoginModal: (state, action) => action.payload,
   },
 });
 
@@ -14,9 +12,7 @@ const joinModal = createSlice({
   name: "joinModal",
   initialState: false,
   reducers: {
-    setJoinModal: (state) => {
-      return !state;
-    },
+    setJoinModal: (state, action) => action.payload,
   },
 });
 
@@ -24,9 +20,7 @@ const passwordModal = createSlice({
   name: "passwordModal",
   initialState: false,
   reducers: {
-    setPasswordModal: (state) => {
-      return !state;
-    },
+    setPasswordModal: (state, action) => action.payload,
   },
 });
 

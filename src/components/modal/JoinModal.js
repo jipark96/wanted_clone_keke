@@ -13,12 +13,12 @@ function JoinModal(props) {
 
   const dispatch = useDispatch();
 
-  const handleJoinModal = (state) => {
-    dispatch(setJoinModal(state));
+  const handleJoinModal = () => {
+    dispatch(setJoinModal(false));
   };
 
-  const handleLoginModal = (state) => {
-    dispatch(setLoginModal(state));
+  const handleLoginModal = () => {
+    dispatch(setLoginModal(false));
   };
 
   const handleJoin = () => {
@@ -31,8 +31,8 @@ function JoinModal(props) {
     // 로컬 스토리지에 회원 정보 저장
     localStorage.setItem("user", JSON.stringify(user));
     setShowAlert(true);
-    handleJoinModal(false);
-    handleLoginModal(false);
+    // handleJoinModal();
+    handleLoginModal();
   };
 
   let [country, setCountry] = useState([

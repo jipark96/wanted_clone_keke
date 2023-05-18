@@ -8,20 +8,18 @@ function LoginModal(props) {
   let [isEmailValid, setIsEmailValid] = useState(false);
   let [country, setCountry] = useState(["한국", "English", "日本語"]);
 
-  const loginModal = useSelector((state) => state.loginModal);
   const dispatch = useDispatch();
 
   const handleLoginModal = () => {
-    dispatch(setLoginModal());
+    dispatch(setLoginModal(false));
   };
 
-  const joinModal = useSelector((state) => state.joinModal);
   const handleJoinModal = () => {
-    dispatch(setJoinModal());
+    dispatch(setJoinModal(true));
   };
-  const passwordModal = useSelector((state) => state.passwordModal);
+
   const handlePasswordModal = () => {
-    dispatch(setPasswordModal());
+    dispatch(setPasswordModal(true));
   };
   const validEmail = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -40,11 +38,10 @@ function LoginModal(props) {
     if (isEmailValid) {
       if (checkEmailInLocalStorage(props.email)) {
         handlePasswordModal();
-        setLoginModal(false);
-        setJoinModal(false);
+        handleLoginModal();
       } else {
         handleJoinModal();
-        setLoginModal(false);
+        handleLoginModal();
       }
     }
   };

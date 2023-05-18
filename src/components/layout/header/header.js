@@ -15,17 +15,11 @@ function Header() {
 
   const dispatch = useDispatch();
 
-  const handleLoginModal = (state) => {
-    dispatch(setLoginModal(state));
-  };
-  const handleJoinModal = (state) => {
-    dispatch(setJoinModal(state));
+  const handleLoginModal = () => {
+    dispatch(setLoginModal(true));
   };
 
   const passwordModal = useSelector((state) => state.passwordModal);
-  const handlePasswordModal = (state) => {
-    dispatch(setPasswordModal(state));
-  };
   const navigate = useNavigate();
 
   const handleLogout = () => {

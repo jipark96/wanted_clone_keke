@@ -8,27 +8,26 @@ const PasswordModal = (props) => {
   const [password, setPassword] = useState("");
   const [showAlertIncorrect, setShowAlertIncorrect] = useState(false);
   const [showAlertSuccess, setShowAlertSuccess] = useState(false);
-  const loginModal = useSelector((state) => state.loginModal);
+
   const dispatch = useDispatch();
 
-  const handleLoginModal = (state) => {
-    dispatch(setLoginModal(state));
+  const handleLoginModal = () => {
+    dispatch(setLoginModal(false));
   };
-  const passwordModal = useSelector((state) => state.passwordModal);
-  const handlePasswordModal = (state) => {
-    dispatch(setPasswordModal(state));
+  const handlePasswordModal = () => {
+    dispatch(setPasswordModal(false));
   };
   const handleLogin = () => {
     const storedUserString = localStorage.getItem("user");
     const storedUser = JSON.parse(storedUserString);
     if (storedUser.password !== password) {
       setShowAlertIncorrect(true);
-      handleLoginModal(false);
+      handleLoginModal();
       return false;
     } else {
       setShowAlertSuccess(true);
-      handlePasswordModal(false);
-      handleLoginModal(false);
+      // handlePasswordModal();
+      handleLoginModal();
       props.setIsLoggedIn(true);
     }
   };
