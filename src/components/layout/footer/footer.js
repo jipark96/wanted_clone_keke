@@ -58,7 +58,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <hr style={{ width: 1060, margin: "25px auto" }} />
+      <hr style={{ width: 1060, margin: "1.5625rem auto" }} />
       <div className="footer_wrap2">
         <div className="footer_div4">
           <div>
